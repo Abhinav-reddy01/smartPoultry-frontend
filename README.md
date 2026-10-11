@@ -1,16 +1,43 @@
-# React + Vite
+# Smart Poultry Management - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Modern React + Vite frontend for the Smart Poultry Farm Management system.
 
-Currently, two official plugins are available:
+## Tech Stack
+- **Framework**: React 19 + Vite
+- **Routing**: React Router 7
+- **Data Visualization**: Chart.js + react-chartjs-2
+- **Icons**: Lucide Icons
+- **Deployment**: Vercel
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Quick Start (Local)
 
-## React Compiler
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. Start development server:
+   ```bash
+   npm run dev
+   ```
 
-## Expanding the Oxlint configuration
+3. Open [http://localhost:5173](http://localhost:5173).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+---
+
+## Deployment on Vercel
+
+1. Push this repository to GitHub.
+2. In [Vercel](https://vercel.com), click **Add New...** -> **Project**.
+3. Import your repository: `Abhinav-reddy01/smartPoultry-frontend`.
+4. Framework Preset: **Vite** (auto-detected).
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+5. In **Environment Variables**, add:
+   - `VITE_API_URL`: Your deployed Render backend URL, for example:
+     ```
+     https://smartpoultry-backend.onrender.com/api
+     ```
+6. Click **Deploy**.
+
+> **Note**: A [`vercel.json`](vercel.json) rewrite rule is already included to ensure client-side routing (`/stock`, `/sales`, `/customers`, etc.) functions properly without 404 errors on page refresh.
