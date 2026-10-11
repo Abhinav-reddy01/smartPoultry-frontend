@@ -29,6 +29,7 @@ function Login() {
     try {
       const credentials = {
         username: form.email.trim(),
+        email: form.email.trim(),
         password: form.password,
       };
       const data = isRegistering

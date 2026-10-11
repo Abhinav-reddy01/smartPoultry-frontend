@@ -1,5 +1,7 @@
-export const API_BASE_URL =
-  import.meta.env.VITE_API_URL || 'http://localhost:8080/api';
+const rawBaseUrl = (import.meta.env.VITE_API_URL || 'http://localhost:8080/api').trim();
+export const API_BASE_URL = rawBaseUrl.endsWith('/')
+  ? rawBaseUrl.slice(0, -1)
+  : rawBaseUrl;
 
 export function getToken() {
   return localStorage.getItem('poultry_token');

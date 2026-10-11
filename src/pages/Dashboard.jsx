@@ -455,7 +455,7 @@ export default function Dashboard() {
                     for a brighter tomorrow.
                   </p>
 
-                  <NavLink to="/egg-stock" className="promo-button">
+                  <NavLink to="/stock" className="promo-button">
                     Manage Farm <span>→</span>
                   </NavLink>
                 </div>
